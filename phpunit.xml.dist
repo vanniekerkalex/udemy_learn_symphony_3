@@ -28,4 +28,11 @@
             </exclude>
         </whitelist>
     </filter>
+    <logging>
+        <log type="coverage-html" target="./build/coverage" title="Autotrader coverage report" charset="UTF-8"
+            yui="true" highlight="true" />
+        <log type="coverage-clover" target="./build/logs/clover.xml"/>
+        <log type="junit" target="./build/logs/junit.xml"/>
+        <log type="testdox-html" target="./build/logstestdox.html"/>
+    </logging>
 </phpunit>
