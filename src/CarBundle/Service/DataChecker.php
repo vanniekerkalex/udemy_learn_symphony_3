@@ -11,7 +11,7 @@ class DataChecker
     
     /** @var EntityManager */
     protected $entityManager;
-
+    
     /**
      * DataChecker constructor.
      *
@@ -20,8 +20,8 @@ class DataChecker
      */
     public function __construct($entityManager, $requireImagesToPromoteCar)
     {
-        $this-> entityManager               = $entityManager;
-        $this->requireImagesToPromoteCar    = $requireImagesToPromoteCar;
+        $this->entityManager = $entityManager;
+        $this->requireImagesToPromoteCar = $requireImagesToPromoteCar;
     }
     
     public function checkCar(Car $car)
@@ -35,7 +35,7 @@ class DataChecker
         $car->setPromote($promote);
         $this->entityManager->persist($car);
         $this->entityManager->flush();
-        
+
         return $promote;
     }
 }
